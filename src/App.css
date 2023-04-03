@@ -1,38 +1,66 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Nunito:wght@400;800&display=swap');
+.quote-box{
+  width: 400px;
   text-align: center;
+  padding: 15px;
+  background-color: #50E3C1;
+  border-radius: 10px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote-title , .author{
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.quote{
+  margin-bottom: 15px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.2rem;
+  color: #9554FF;
+  font-weight: bold;
+}
+.author{
+  font-size: 12px;
+}
+button{
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  background-color: #fff;
+}
+button.active{
+  animation: jello-horizontal 0.9s both;
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
